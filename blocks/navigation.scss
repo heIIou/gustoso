@@ -1,0 +1,84 @@
+%flex {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+.nav {
+  $max-height: 70px;
+  $block: &;
+  @extend %flex;
+  width: 100%;
+  background-color: $background-dark;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: $max-height;
+  position: absolute;
+  .container {
+    max-width: $max-width;
+    width: 100%;
+    height: $max-height;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-content: center;
+    @extend %flex;
+    #{$block}__wrapper {
+      height: 100%;
+      @extend %flex;
+    }
+    #{$block}__logo {
+      margin: 0;
+      @extend %flex;
+      font-family: 'Scriptina';
+      font-size: 2em;
+      color: $white;
+      align-self: center;
+    }
+  }
+  .navigation {
+    height: 100%;
+    max-width: 770px;
+    width: 100%;
+    @extend %flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+    justify-content: space-between;
+    &__item {
+      font-family: 'Alegreya';
+      font-size: 19px;
+      @extend %flex;
+      text-transform: uppercase;
+      color: $white;
+      align-self: center;
+    }
+  }
+  %bg-icons {
+    background-image: url(../images/social-media.png);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+  }
+  .social-media {
+    height: 100%;
+    @extend %flex;
+    justify-content: space-between;
+    align-content: center;
+    &__link {
+      align-self: center;
+      min-width: 20px;
+      min-height: 70px;
+    }
+    .twitter {
+      @extend %bg-icons;
+    }
+    .facebook {
+      background-position: 20px;
+      @extend %bg-icons;
+    }
+    .instagram {
+      background-position: 34px;
+      @extend %bg-icons;
+    }
+  }
+}

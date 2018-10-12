@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "Alegreya";
+  src: url(../fonts/Alegreya-Regular.ttf);
+}
+@font-face {
+  font-family: "Scriptina";
+  src: url(../fonts/SCRIPTIN.ttf);
+}
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url(../fonts/PlayfairDisplay-Bold.ttf);
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url(../fonts/ProximaNova-Regular.ttf);
+}
+@font-face {
+  font-family: "Alegreya-Bold";
+  src: url(../fonts/Alegreya-Bold.ttf);
+}
+.header .container *, .header .container, .header, .nav .social-media, .nav .navigation__item, .nav .navigation, .nav .container .nav__logo, .nav .container .nav__wrapper, .nav .container, .nav {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.nav {
+  width: 100%;
+  background-color: rgba(86, 83, 76, 0.53);
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 70px;
+  position: absolute;
+}
+.nav .container {
+  max-width: 1260px;
+  width: 100%;
+  height: 70px;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-content: center;
+}
+.nav .container .nav__wrapper {
+  height: 100%;
+}
+.nav .container .nav__logo {
+  margin: 0;
+  font-family: "Scriptina";
+  font-size: 2em;
+  color: white;
+  align-self: center;
+}
+.nav .navigation {
+  height: 100%;
+  max-width: 770px;
+  width: 100%;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-between;
+}
+.nav .navigation__item {
+  font-family: "Alegreya";
+  font-size: 19px;
+  text-transform: uppercase;
+  color: white;
+  align-self: center;
+}
+.nav .social-media .instagram, .nav .social-media .facebook, .nav .social-media .twitter {
+  background-image: url(../images/social-media.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+.nav .social-media {
+  height: 100%;
+  justify-content: space-between;
+  align-content: center;
+}
+.nav .social-media__link {
+  align-self: center;
+  min-width: 20px;
+  min-height: 70px;
+}
+.nav .social-media .facebook {
+  background-position: 20px;
+}
+.nav .social-media .instagram {
+  background-position: 34px;
+}
+
+.header .container *, .header .container, .header, .nav, .nav .container, .nav .container .nav__wrapper, .nav .container .nav__logo, .nav .navigation, .nav .navigation__item, .nav .social-media {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.header {
+  background-image: url(../images/header_background.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+.header .container {
+  width: 1260px;
+  width: 100%;
+  min-height: 900px;
+  justify-content: center;
+  flex-flow: column nowrap;
+}
+.header .container * {
+  align-self: center;
+  color: white;
+}
+.header .container .header__header {
+  font-family: "PlayfairDisplay", serif;
+  font-size: 50px;
+  margin: 70px;
+}
+.header .container .header__text {
+  font-family: "ProximaNova", serif;
+  font-size: 25px;
+  margin: 20px;
+  text-align: center;
+}
+.header .container .header__button {
+  max-width: 200px;
+  max-height: 50px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(86, 83, 76, 0.53);
+  font-family: "Alegreya-Bold";
+  margin: 15px;
+}
+
+/*# sourceMappingURL=main.css.map */
