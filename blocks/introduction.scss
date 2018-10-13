@@ -1,0 +1,166 @@
+.introduction {
+  @extend %flex;
+  background-color: #fefdfb;
+  justify-content: center;
+  height: 760px;
+  & * {
+    @extend %flex;
+    & * {
+      @extend %flex;
+      & * {
+        @extend %flex;
+        & * {
+          @extend %flex;
+        }
+      }
+    }
+  }
+  &__container {
+    max-width: $max-width;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .article {
+    width: 50%;
+    justify-content: center;
+    $block: &;
+    &__container {
+      width: 83%;
+      flex-flow: column wrap;
+      justify-content: center;
+    }
+    &__header {
+      width: 100%;
+      font-family: 'Alegreya-Bold';
+      font-size: 60px;
+      color: $dark;
+      margin-top: 10px;
+      justify-content: center;
+    }
+    &__header.small.red {
+      color: #a47d5e;
+      font-size: 20px;
+      margin-bottom: 70px;
+      text-transform: uppercase;
+    }
+    &__text {
+      width: 100%;
+      font-family: $Proxima;
+      color: $dark;
+      margin-bottom: 70px;
+      text-align: center;
+    }
+    h3 {
+      width: 100%;
+      font-family: 'Alegreya-Bold';
+      font-size: 30px;
+      color: $dark;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+    &__chef {
+      flex-flow: row nowrap;
+      width: 100%;
+      justify-content: space-around;
+      margin-top: 25px;
+      &__text {
+        $borders: 1px solid #d7d5ca;
+        font-family: $Alegreya;
+        font-size: 28px;
+        border-top: $borders;
+        border-bottom: $borders;
+        align-self: center;
+        padding: 16px;
+      }
+      &__photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background: url(../images/chef.jpg) no-repeat ;
+        background-size: 250%;
+        background-position: -40px -2px;
+      }
+    }
+    .blockquote {
+      width: 100%;
+      flex-flow: row wrap;
+      justify-content: center;
+      &__quote {
+        font-family: $Times;
+        font-size: 70px;
+        align-self: flex-start;
+        color: rgba(86,83,76,0.5);
+      }
+      &__text {
+        font-family: $Scriptina;
+        color: #a47d5e;
+        text-align: center;
+        align-self: center;
+        padding: 50px;
+      }
+      &__quote.rotate {
+        transform: rotate(180deg);
+        align-self: flex-end;
+        margin-top: 70px;
+      }
+    }
+  }
+  .gallery {
+    width: 50%;
+    justify-content: space-between;
+    position: relative;
+    flex-flow: row wrap;
+    align-content: center;
+    &__photo {
+      max-height: 250px;
+      height: 100%;
+      max-width: 295px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      background-position: center;
+      justify-content: center;
+      margin: 10px;
+      &__border {
+        height: calc(100% - 20px);
+        width: calc(100% - 20px);
+        border: 5px solid white;
+        align-self: center;
+      }
+    }
+    .top-left {
+      background-image: url(../images/gallery-top-left.jpg);
+    }
+    .top-right {
+      background-image: url(../images/gallery-top-right.jpg);
+    }
+    .bottom-left {
+      background-image: url(../images/gallery-bottom-left.jpg);
+      background-size: 100% auto;
+    }
+    .bottom-right {
+      background-image: url(../images/gallery-bottom-right.jpg);
+    }
+    &__text__bg {
+      position: absolute;
+      align-self: center;
+      height: 100%;
+      width: 100%;
+      background: url(../images/gallery-text-bg.png) center no-repeat;
+      justify-content: center;
+      position: absolute;
+      z-index: 8;
+      height: 100%;
+    }
+    &__text {
+      width: 36%;
+      align-self: center;
+      z-index: 10;
+      text-transform: uppercase;
+      font-family: $Alegreya;
+      color: #c9b176;
+      font-size: 32px;
+      text-align: center;
+    }
+  }
+}
