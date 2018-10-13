@@ -3,6 +3,7 @@ $Alegreya: 'Alegreya',serif;
 $Scriptina: 'Scriptina', sans-serif;
 $Playfair: 'PlayfairDisplay', serif;
 $Proxima: 'ProximaNova', serif;
+$Times: 'TimesNewRoman', serif;
 @font-face {
   font-family: 'Alegreya';
   src:url(../fonts/Alegreya-Regular.ttf);
@@ -22,4 +23,8 @@ $Proxima: 'ProximaNova', serif;
 @font-face {
   font-family: 'Alegreya-Bold';
   src: url(../fonts/Alegreya-Bold.ttf);
+}
+@font-face {
+  font-family: 'TimesNewRoman';
+  src: url(../fonts/times.ttf);
 }

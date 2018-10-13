@@ -1,7 +1,5 @@
-%flex {
-  display: -webkit-flex;
-  display: -ms-flex;
-  display: flex;
+body {
+  position: relative;
 }
 .nav {
   $max-height: 70px;
@@ -13,7 +11,8 @@
   -ms-flex-pack: center;
   justify-content: center;
   height: $max-height;
-  position: absolute;
+  position: fixed;
+  z-index: 1000;
   .container {
     max-width: $max-width;
     width: 100%;
