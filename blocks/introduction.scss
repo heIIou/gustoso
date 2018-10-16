@@ -90,13 +90,16 @@
         font-size: 70px;
         align-self: flex-start;
         color: rgba(86,83,76,0.5);
+        min-width: 12.5%;
+        justify-content: center;
       }
       &__text {
         font-family: $Scriptina;
         color: #a47d5e;
         text-align: center;
         align-self: center;
-        padding: 50px;
+        max-width: 75%;
+        font-size: 27px;
       }
       &__quote.rotate {
         transform: rotate(180deg);

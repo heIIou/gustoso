@@ -1,10 +1,12 @@
-// Necessary objects
-@import "../styles/reset";
-@import "../styles/fonts";
-@import "../styles/colors";
-@import "../styles/width";
-@import "../styles/flex";
-// Blocks;
+//Necessary files
+@import "../styles/reset.scss";
+@import "../styles/colors.scss";
+@import "../styles/fonts.scss";
+@import "../styles/width.scss";
+@import "../styles/flex.scss";
+//Blocks
 @import "../blocks/navigation.scss";
 @import "../blocks/header.scss";
 @import "../blocks/introduction.scss";
+@import "../blocks/rating.scss";
+@import "../blocks/breakfast-menu.scss";

@@ -1,0 +1,190 @@
+.breakfast-menu {
+  @extend %flex;
+  $break: &;
+  $max-height: 760px;
+  align-self: center;
+  justify-content: center;
+  min-height: $max-height;
+  height: 100%;
+  background: url(../images/breakfast-menu-background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  &__container {
+    max-width: $max-width;
+    width: 100%;
+    max-height: 100%;
+    @extend %flex;
+    #{$break}__prices {
+      @extend %flex;
+      flex-flow: row wrap;
+      max-width: 50%;
+      width: 100%;
+      justify-content: center;
+      align-content: center;
+      #{$break}__header {
+        @extend %flex;
+        font-family: 'Alegreya-Bold';
+        font-size: 40px;
+        color: $white;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        align-self: center;
+        margin: 10px;
+        &.small {
+          font-size: 15px;
+          text-transform: uppercase;
+          color: #c8a593;
+          margin-top: 0px;
+          margin-bottom: 35px;
+        }
+      }
+      #{$break}__name {
+        @extend %flex;
+        font-family: 'Alegreya-Bold';
+        font-size: 28px;
+        color: $white;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+      }
+      #{$break}__descr {
+        @extend %flex;
+        font-family: $Proxima;
+        font-size: 20px;
+        color: #c2beba;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        margin: 15px;
+      }
+      #{$break}__price {
+        position: relative;
+        @extend %flex;
+        font-family: $Alegreya;
+        font-size: 40px;
+        color: #dfc691;
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 10px;
+        .price-after  {
+          display: -webkit-flex;
+          display: -ms-flex;
+          display: flex;
+          position: absolute;
+          bottom: -30px;
+          opacity: 0.3;
+          background: url(../images/price-background.png) no-repeat;
+          max-width: 90px;
+          width: 100%;
+          max-height: 27px;
+          height: 100%;
+          background-position: center;
+        }
+      }
+    }
+  }
+  .info {
+    @extend %flex;
+    max-width: 50%;
+    width: 100%;
+    height: 100%;
+    flex-flow: row-reverse wrap;
+    $inf: '.info';
+    &__background {
+      @extend %flex;
+      max-width: 70%;
+      max-height: 600px;
+      height: 100%;
+      width: 100%;
+      justify-content: center;
+      background-color: #f3f1e9;
+      align-self: center;
+      position: relative;
+      .background__border {
+        @extend %flex;
+        max-width: calc(100% - 20px);
+        max-height: calc(100% - 20px);
+        width: 100%;
+        height: 100%;
+        margin-top: 10px;
+        border: 1px dashed #9e9c93;
+        justify-content: center;
+        align-items: space-evenly;
+        flex-flow: row wrap;
+        #{$inf}__header {
+          @extend %flex;
+          max-width: 100%;
+          width: 100%;
+          align-items: flex-end;
+          #{$inf}__head {
+            @extend %flex;
+            max-width: 50%;
+            width: 100%;
+            color: $dark;
+            justify-content: center;
+            margin-top: 10px;
+          }
+        }
+        #{$inf}__object {
+          @extend %flex;
+          max-width: 90%;
+          width: 100%;
+          max-height: 65px;
+          height: 100%;
+          background: url(../images/info-file-object.png) no-repeat center;
+          background-size: 100% auto;
+        }
+        #{$inf}__file-header {
+          @extend %flex;
+          max-width: 85%;
+          font-family: 'Alegreya-Bold';
+          font-size: 40px;
+          color: $dark;
+          text-align: center;
+          margin-top: 20px;
+        }
+        #{$inf}__file-text {
+          @extend %flex;
+          font-family: $Proxima;
+          font-size: 16px;
+          color: $dark;
+          max-width: 85%;
+          text-align: center;
+        }
+        #{$inf}__button {
+          @extend %flex;
+          max-width: 50%;
+          max-height: 50px;
+          height: 100%;
+          width: 100%;
+          justify-content: center;
+          text-transform: uppercase;
+          margin: 0;
+          border: 1px solid black;
+          font-size: 20px;
+          font-family: 'Alegreya-Bold';
+          color: $protone;
+          background: transparent;
+        }
+        #{$inf}__file-background {
+          @extend %flex;
+          max-width: 230px;
+          max-height: 210px;
+          width: 100%;
+          height: 100%;
+          background: url(../images/info-file-background.png) no-repeat;
+          background-size: cover;
+          position: absolute;
+          background-position: 60px 53px;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+  }
+}

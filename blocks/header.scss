@@ -30,10 +30,11 @@
       text-align: center;
     }
     #{$block}__button {
-      max-width: 200px;
-      max-height: 50px;
-      width: 100%;
-      height: 100%;
+      border: 1px dashed;
+      text-transform: uppercase;
+      height: 50px;
+      width: 200px;
+      letter-spacing: 3px;
       background-color: $background-dark;
       font-family: 'Alegreya-Bold';
       margin: 15px;
