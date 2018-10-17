@@ -1,83 +1,123 @@
-body {
-  position: relative;
-}
-.nav {
-  $max-height: 70px;
+body { position: relative; }
+
+.menu {
+  $menu-height: 70px;
   $block: &;
-  @extend %flex;
+  position: fixed;
+  z-index: 1000;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
   width: 100%;
-  background-color: $background-dark;
+  height: $menu-height;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  height: $max-height;
-  position: fixed;
-  z-index: 1000;
-  .container {
+  background-color: $background-dark;
+
+  &__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     max-width: $max-width;
     width: 100%;
-    height: $max-height;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+    height: $menu-height;
     justify-content: space-between;
-    align-content: center;
-    @extend %flex;
-    #{$block}__wrapper {
-      height: 100%;
-      @extend %flex;
-    }
-    #{$block}__logo {
-      margin: 0;
-      @extend %flex;
-      font-family: 'Scriptina';
-      font-size: 2em;
-      color: $white;
-      align-self: center;
-    }
+    align-items: center;
   }
+
+  &__logo {
+    margin: 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    height: $menu-height;
+    align-items: baseline;
+    font-family: $Scriptina;
+    font-size: 30px;
+    color: $white;
+    line-height: 60px;
+    letter-spacing: 4px;
+  }
+
   .navigation {
-    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    height: $menu-height;
     max-width: 770px;
     width: 100%;
-    @extend %flex;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
     -ms-flex-pack: distribute;
     justify-content: space-between;
+
     &__item {
-      font-family: 'Alegreya';
-      font-size: 19px;
-      @extend %flex;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      height: $menu-height;
+    }
+
+    &__link {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      max-height: 100%;
+      height: 100%;
+      max-width: 100%;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      font-family: $Alegreya;
+      font-size: 14px;
+      letter-spacing: 4px;
       text-transform: uppercase;
       color: $white;
-      align-self: center;
+      text-decoration: none;
+      list-style: none;
+    }
+
+    &__decor {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      width: 100%;
+      justify-content: center;
     }
   }
-  %bg-icons {
-    background-image: url(../images/social-media.png);
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-  }
+
   .social-media {
-    height: 100%;
-    @extend %flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     justify-content: space-between;
     align-content: center;
+    height: $menu-height;
+
     &__link {
-      align-self: center;
+      margin-left: 19px;
+      margin-top: 2px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
       min-width: 20px;
-      min-height: 70px;
-    }
-    .twitter {
-      @extend %bg-icons;
-    }
-    .facebook {
-      background-position: 20px;
-      @extend %bg-icons;
-    }
-    .instagram {
-      background-position: 34px;
-      @extend %bg-icons;
+      height: $menu-height;
+      align-items: center;
+      justify-content: center;
+      background-image: url(../images/social-media.png);
+      background-size: 500% auto;
+      background-repeat: no-repeat;
+
+      &.twitter {
+        background-position: 0;
+        margin-left: 52px;
+      }
+
+      &.facebook { background-position: -18px; }
+
+      &.instagram {background-position: -34px; }
     }
   }
 }
