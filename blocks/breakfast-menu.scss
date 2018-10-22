@@ -1,190 +1,276 @@
 .breakfast-menu {
-  @extend %flex;
-  $break: &;
-  $max-height: 760px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  height: $heightofblock;
   align-self: center;
   justify-content: center;
-  min-height: $max-height;
-  height: 100%;
-  background: url(../images/breakfast-menu-background.jpg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  &__container {
+  background: url(../images/breakfast-menu-background.jpg) no-repeat;
+  background-size: 107% auto;
+  background-position: -52px -183px;
+  
+  &__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     max-width: $max-width;
     width: 100%;
     max-height: 100%;
-    @extend %flex;
-    #{$break}__prices {
-      @extend %flex;
-      flex-flow: row wrap;
-      max-width: 50%;
-      width: 100%;
-      justify-content: center;
-      align-content: center;
-      #{$break}__header {
-        @extend %flex;
-        font-family: 'Alegreya-Bold';
-        font-size: 40px;
-        color: $white;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-        align-self: center;
-        margin: 10px;
-        &.small {
-          font-size: 15px;
-          text-transform: uppercase;
-          color: #c8a593;
-          margin-top: 0px;
-          margin-bottom: 35px;
-        }
-      }
-      #{$break}__name {
-        @extend %flex;
-        font-family: 'Alegreya-Bold';
-        font-size: 28px;
-        color: $white;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-        margin-top: 30px;
-      }
-      #{$break}__descr {
-        @extend %flex;
-        font-family: $Proxima;
-        font-size: 20px;
-        color: #c2beba;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-        margin: 15px;
-      }
-      #{$break}__price {
-        position: relative;
-        @extend %flex;
-        font-family: $Alegreya;
-        font-size: 40px;
-        color: #dfc691;
-        max-width: 100%;
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-        .price-after  {
-          display: -webkit-flex;
-          display: -ms-flex;
-          display: flex;
-          position: absolute;
-          bottom: -30px;
-          opacity: 0.3;
-          background: url(../images/price-background.png) no-repeat;
-          max-width: 90px;
-          width: 100%;
-          max-height: 27px;
-          height: 100%;
-          background-position: center;
-        }
-      }
+    justify-content: center;
+  }
+
+  &__prices {
+    margin-left: 85px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: calc(50% - 80px);
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-top: 85px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    color: $white;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 60px;
+
+    &.small {
+      margin-top: 5px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #c8a593;
+      letter-spacing: 1.4px;
     }
   }
-  .info {
-    @extend %flex;
+
+  &__name {
+    margin-top: 35px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 30px;
+    color: $white;
+    letter-spacing: 1.7px;
+
+    &.last {
+      margin-top: 40px;
+    }
+  }
+
+
+  &__descr {
+    margin-top: 12px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-family: $Proxima;
+    font-size: 16px;
+    color: #c2beba;
+    letter-spacing: 0.8px;
+
+    &.last {
+      margin-top: 15px;
+    }
+  }
+
+  &__price {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    font-family: $Alegreya;
+    font-size: 36px;
+    color: #dfc691;
+    letter-spacing: 1.4px;
+
+    &.last {
+      margin-top: 25px;
+    }
+
+    &-after  {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      position: absolute;
+      bottom: -30px;
+      opacity: 0.3;
+      background: url(../images/price-background.png) no-repeat;
+      max-width: 90px;
+      width: 100%;
+      max-height: 27px;
+      height: 100%;
+      background-position: center;
+    }
+  }
+}
+
+.info {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  max-width: 50%;
+  width: 100%;
+  height: 100%;
+  flex-flow: row-reverse wrap;
+
+  &__background {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 70%;
+    max-height: 600px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background-color: #f3f1e9;
+    align-self: center;
+
+    &__border {
+      margin-top: 10px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      max-width: calc(100% - 20px);
+      max-height: calc(100% - 20px);
+      width: 100%;
+      height: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      flex-flow: column wrap;
+      border: 1px dashed #9e9c93;
+    }
+  }
+
+  &__header {
+    margin-top: 40px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    align-items: flex-end;
+  }
+
+  &__title {
+    margin: 10px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     max-width: 50%;
     width: 100%;
-    height: 100%;
-    flex-flow: row-reverse wrap;
-    $inf: '.info';
-    &__background {
-      @extend %flex;
-      max-width: 70%;
-      max-height: 600px;
-      height: 100%;
-      width: 100%;
-      justify-content: center;
-      background-color: #f3f1e9;
-      align-self: center;
-      position: relative;
-      .background__border {
-        @extend %flex;
-        max-width: calc(100% - 20px);
-        max-height: calc(100% - 20px);
-        width: 100%;
-        height: 100%;
-        margin-top: 10px;
-        border: 1px dashed #9e9c93;
-        justify-content: center;
-        align-items: space-evenly;
-        flex-flow: row wrap;
-        #{$inf}__header {
-          @extend %flex;
-          max-width: 100%;
-          width: 100%;
-          align-items: flex-end;
-          #{$inf}__head {
-            @extend %flex;
-            max-width: 50%;
-            width: 100%;
-            color: $dark;
-            justify-content: center;
-            margin-top: 10px;
-          }
-        }
-        #{$inf}__object {
-          @extend %flex;
-          max-width: 90%;
-          width: 100%;
-          max-height: 65px;
-          height: 100%;
-          background: url(../images/info-file-object.png) no-repeat center;
-          background-size: 100% auto;
-        }
-        #{$inf}__file-header {
-          @extend %flex;
-          max-width: 85%;
-          font-family: 'Alegreya-Bold';
-          font-size: 40px;
-          color: $dark;
-          text-align: center;
-          margin-top: 20px;
-        }
-        #{$inf}__file-text {
-          @extend %flex;
-          font-family: $Proxima;
-          font-size: 16px;
-          color: $dark;
-          max-width: 85%;
-          text-align: center;
-        }
-        #{$inf}__button {
-          @extend %flex;
-          max-width: 50%;
-          max-height: 50px;
-          height: 100%;
-          width: 100%;
-          justify-content: center;
-          text-transform: uppercase;
-          margin: 0;
-          border: 1px solid black;
-          font-size: 20px;
-          font-family: 'Alegreya-Bold';
-          color: $protone;
-          background: transparent;
-        }
-        #{$inf}__file-background {
-          @extend %flex;
-          max-width: 230px;
-          max-height: 210px;
-          width: 100%;
-          height: 100%;
-          background: url(../images/info-file-background.png) no-repeat;
-          background-size: cover;
-          position: absolute;
-          background-position: 60px 53px;
-          position: absolute;
-          bottom: 0;
-          right: 0;
-        }
-      }
+    justify-content: center;
+    font-family: $Alegreya;
+    font-size: 14px;
+    color: $dark;
+
+    &:first-child {
+      margin-left: 20px;
+    };
+    &:last-child {
+      margin-right: 20px;
     }
+  }
+
+  &__object {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 90%;
+    width: 100%;
+    max-height: 65px;
+    height: 100%;
+    background: url(../images/info-file-object.png) no-repeat center;
+    background-size: 100% auto;
+  }
+
+  &__file-title {
+    margin-top: 60px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 85%;
+    text-align: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 44px;
+    color: $dark;
+    line-height: 60px;
+    letter-spacing: 1.5px;
+  }
+
+  &__file-text {
+    margin-top: 31px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 85%;
+    font-family: $Proxima;
+    font-size: 14px;
+    color: $dark;
+    text-align: center;
+    line-height: 30px;
+    letter-spacing: 0.7px;
+  }
+
+  &__button {
+    margin-top: 43px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 45%;
+    max-height: 50px;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    text-transform: uppercase;
+    border: 1px solid black;
+    font-size: 18px;
+    font-family: $Alegreya;
+    font-weight: bold;
+    color: $protone;
+    background: transparent;
+    letter-spacing: 1px;
+  }
+
+  &__file-background {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 230px;
+    max-height: 210px;
+    width: 100%;
+    height: 100%;
+    background: url(../images/info-file-background.png) no-repeat;
+    background-size: cover;
+    background-position: 60px 53px;
   }
 }
