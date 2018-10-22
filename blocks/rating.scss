@@ -1,131 +1,170 @@
+$rating-width: 965px;
 
-$slider: ".slider";
 .rating {
-  $block: &;
-  @extend %flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  min-height: 760px;
+  height: 100%;
   justify-content: center;
   background: url(../images/rating-background.jpg);
   background-size: 100% auto;
   background-repeat: no-repeat;
-  min-height: 760px;
-  height: 100%;
-  &__container {
+
+  &__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
     width: $max-width;
     max-height: inherit;
-    @extend %flex;
     justify-content: center;
-    #{$block}__pad {
-      @extend %flex;
-      max-width: 965px;
-      width: 100%;
-      max-height: 512px;
-      height: 100%;
-      align-self: center;
-      flex-flow: row-reverse wrap;
-      #{$block}__backgrounds {
-        position: relative;
-        max-height: inherit;
-        @extend %flex;
-        flex-flow: row nowrap;
-        overflow: hidden;
-        max-height: 100%;
-        #{$block}__slider {
-          max-width: inherit;
-          max-height: inherit;
-          @extend %flex;
-          #{$block}__background {
-            @extend %flex;
-            height: 100%;
-          }
-        }
+  }
 
-      }
-      #{$block}__article {
-        @extend %flex;
-        flex-flow: column wrap;
-        position: absolute;
-        z-index: 10;
-        background-color: white;
-        max-width: 55%;
-        width: 100%;
-        height: 512px;
-        .article__header {
-          @extend %flex;
-          width: 100%;
-          font-family: 'Alegreya-Bold';
-          color: $dark;
-          font-size: 40px;
-          margin: 15px;
-          &.small {
-            @extend %flex;
-            color: $protone;
-            font-size: 20px;
-          }
-        }
-        .article__text {
-          @extend %flex;
-          font-family: $Proxima;
-          width: 75%;
-          align-self: center;
-        }
-        #{$block}__stars.red {
-          @extend %flex;
-          background-color: orange;
-        }
-        .slider__components {
-          position: relative;
-          @extend %flex;
-          width: 100%;
-          flex-flow: row nowrap;
-          justify-content: center;
-          #{$slider}__button {
-            @extend %flex;
-            position: absolute;
-            bottom: 50px;
-            border: 2px solid $dark;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            &.prev {
-              border: 2px solid #d8bba3;
-              left: 50px;
-            }
-            &.next {
-              right: 50px;
-            }
-          }
-          #{$slider}__preview {
-            @extend %flex;
-            width: 90px;
-            height: 90px;
-            border-radius: 50%;
-            &.preview1 {
-              background: url(../images/jibarito-sandwich.jpg) 200% -20px 0px;
-            }
-            &.preview2 {
-              background: url(../images/slide-3.jpg) 200%;
-            }
-            &.preview3 {
-              background: url(../images/slide-4.jpg) 200%;
-            }
-          }
-          #{$slider}__bullets {
-            @extend %flex;
-            width: 100%;
-            justify-content: center;
-            #{$slider}__bullet {
-              height: 10px;
-              width: 10px;
-              border-radius: 50%;
-              background-color: #d8bba3;
-            }
-          }
-          .active {
-            background-color: white;
-            border: 1px solid $protone;
-          }
-        }
+  &__pad {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: $rating-width;
+    width: 100%;
+    max-height: 512px;
+    height: 100%;
+    align-self: center;
+    justify-content: center;
+    flex-flow: row-reverse wrap;
+  }
+
+  &__backgrounds {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-height: inherit;
+    max-width: inherit;
+    width: 100%;
+    height: 100%;
+    flex-flow: row nowrap;
+  }
+
+  &__bg {
+    width: 100%;
+    height: auto;
+  }
+
+  &__stars.orange {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    background-color: orange;
+  }
+
+  &__article {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: column wrap;
+    position: absolute;
+    z-index: 10;
+    background-color: white;
+    max-width: 545px;
+    width: 100%;
+    height: 512px;
+
+    &__title {
+      margin: 15px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      width: 100%;
+      font-family: $Alegreya;
+      font-weight: bold;
+      color: $dark;
+      font-size: 40px;
+
+      &.small {
+        color: $protone;
+        font-size: 20px;
       }
     }
+
+    &__text {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      width: 75%;
+      align-self: center;
+      font-family: $Proxima;
+    }
   }
+}
+
+.interactive {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+
+  &__button {
+    position: absolute;
+    bottom: 50px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $dark;
+    border-radius: 50%;
+
+    &.prev {
+      border: 2px solid #d8bba3;
+      left: 50px;
+    }
+
+    &.next {
+      right: 50px;
+    }
+  }
+
+  &__preview {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    &.preview1 {
+      background: url(../images/jibarito-sandwich.jpg) center cover;
+    }
+
+    &.preview2 {
+      background: url(../images/slide-3.jpg) center cover;
+    }
+
+    &.preview3 {
+      background: url(../images/slide-4.jpg) center cover;
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &__bullet {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #d8bba3;
+    }
+  }
+}
+
+.active {
+  background-color: white;
+  border: 1px solid $protone;
 }
