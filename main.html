@@ -9,8 +9,8 @@
 </head>
 <body>
   <nav class="menu">
-      <div class="menu__wrapper">
-        <a class="menu__logo">Gustoso</a>
+    <div class="menu__wrapper">
+      <a class="menu__logo">Gustoso</a>
       <div class="menu__navigation navigation">
         <li class="navigation__link"><a href="#" class="navigation__link">welcome</a></li>
         <li class="navigation__link"><div href="#" class="navigation__decor">~</div></li>
@@ -19,7 +19,7 @@
         <li class="navigation__link"><a href="#" class="navigation__link">Reservations </a></li>
         <li class="navigation__link"><div href="#" class="navigation__decor">~</div></li>
         <li class="navigation__link"><a href="#" class="navigation__link">news </a></li>
-      <li class="navigation__link"><div href="#" class="navigation__decor">~</div></li>
+        <li class="navigation__link"><div href="#" class="navigation__decor">~</div></li>
         <li class="navigation__link"><a href="#" class="navigation__link">contact </a></li>
       </div>
       <div class="menu__social-media social-media">
@@ -39,24 +39,25 @@
     </div>
   </div>
 
-  <div class="introduction">
-    <div class="introduction__container">
-      <div class="article">
-        <div class="article__container">
-          <h2 class="article__header">Art of cakes</h2>
-          <p class="article__header small red">we create delicious memories</p>
+  <div class="art-of-cakes">
+    <div class="art-of-cakes__wrapper">
+      <div class="art-of-cakes__object"></div>
+      <div class="art-of-cakes__article article">
+        <div class="article__wrapper">
+          <h2 class="article__title">Art of cakes</h2>
+          <h2 class="article__title small red">we create delicious memories</h2>
           <p class="article__text">Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed.</p>
-          <h3>Chef Cook</h3>
+          <h3 class="article__chef-title">Chef Cook</h3>
           <div class="article__chef">
             <div class="article__chef__text">Benito</div>
             <div class="article__chef__photo"></div>
             <div class="article__chef__text">Gaspare</div>
           </div>
-          <div class="blockquote">
-            <p class="blockquote__quote">"</p>
+          <blockquote class="article__blockquote blockquote">
+            <p class="blockquote__quote">,,</p>
             <p class="blockquote__text">Unique creations for unique occasions.</p>
-            <p class="blockquote__quote rotate">"</p>
-          </div>
+            <p class="blockquote__quote rotate">,,</p>
+          </blockquote>
         </div>
       </div>
       <div class="gallery">
@@ -72,7 +73,7 @@
   </div>
 
   <div class="rating">
-    <div class="rating__container">
+    <div class="rating__wrapper">
       <div class="rating__pad">
         <div class="rating__stars">
           <div class="rating__star star1"></div>
@@ -82,29 +83,24 @@
           <div class="rating__star star5"></div>
         </div>
         <div class="rating__backgrounds">
-          <div class="rating__slider">
-            <img src="images/slide-1.jpg" alt="" class="rating__background background1">
-            <img src="images/jibarito-sandwich.jpg" alt="" class="rating__background background2">
-            <img src="images/slide-3.jpg" alt="" class="rating__background background3">
-            <img src="images/slide-4.jpg" alt="" class="rating__background background4">
-          </div>
-          <div class="rating__article">
-            <h2 class="article__header">Tasty pancakes</h2>
-            <p class="article__header small">season favourite</p>
-            <p class="article__text">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
-            <div class="rating__stars orange"></div>
-            <div class="slider__components">
-              <button class="slider__button prev"></button>
-              <button class="slider__button next"></button>
-              <div class="slider__preview preview1"></div>
-              <div class="slider__preview preview2"></div>
-              <div class="slider__preview preview3"></div>
-              <div class="slider__bullets">
-                <div class="slider__bullet bullet1"></div>
-                <div class="slider__bullet bullet2"></div>
-                <div class="slider__bullet bullet3"></div>
-                <div class="slider__bullet bullet4"></div>
-              </div>
+          <img src="images/slide-1.jpg" alt="" class="rating__bg">
+        </div>
+        <div class="rating__article article">
+          <h2 class="rating__article__title">Tasty pancakes</h2>
+          <p class="rating__article__title small">season favourite</p>
+          <p class="rating__article__text">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
+          <div class="rating__stars orange"></div>
+          <div class="rating__interactive interactive">
+            <button class="interactive__button prev"></button>
+            <button class="interactive__button next"></button>
+            <div class="interactive__preview preview1"></div>
+            <div class="interactive__preview preview2"></div>
+            <div class="interactive__preview preview3"></div>
+            <div class="interactive__bullets">
+              <div class="interactive__bullet bullet1"></div>
+              <div class="interactive__bullet bullet2"></div>
+              <div class="interactive__bullet bullet3"></div>
+              <div class="interactive__bullet bullet4"></div>
             </div>
           </div>
         </div>
@@ -114,32 +110,32 @@
 </div>
 
 <div class="breakfast-menu">
-  <div class="breakfast-menu__container">
+  <div class="breakfast-menu__wrapper">
     <div class="breakfast-menu__prices">
-      <h2 class="breakfast-menu__header">Breakfast</h2>
-      <p class="breakfast-menu__header small">7am breakfast? we're open</p>
-      <p class="breakfast-menu__name">Full breakfast</p>
+      <h2 class="breakfast-menu__title">Breakfast</h2>
+      <p class="breakfast-menu__title small">7am breakfast? we're open</p>
+      <h2 class="breakfast-menu__name">Full breakfast</h2>
       <p class="breakfast-menu__descr">Duis ut tortor, et risus, vulputate pretium</p>
       <p class="breakfast-menu__price">$12.49 <span class="price-after"></span></p>
-      <p class="breakfast-menu__name">Toast & Jam</p>
+      <h2 class="breakfast-menu__name">Toast & Jam</h2>
       <p class="breakfast-menu__descr">Suspendisse, tempus, nterdum</p>
       <p class="breakfast-menu__price">$4.90 <span class="price-after"></span></p>
-      <p class="breakfast-menu__name">Muffins</p>
-      <p class="breakfast-menu__descr">Fusce eget dui sodales est</p>
-      <p class="breakfast-menu__price">$3.95</p>
+      <h2 class="breakfast-menu__name last">Muffins</h2>
+      <p class="breakfast-menu__descr last">Fusce eget dui sodales est</p>
+      <p class="breakfast-menu__price last">$3.95</p>
     </div>
     <div class="info">
       <div class="info__background">
-        <div class="background__border">
+        <div class="info__background__border">
           <div class="info__header">
-            <p class="info__head">EST.</p>
-            <p class="info__head">1893</p>
+            <p class="info__title">EST.</p>
+            <p class="info__title">1893</p>
           </div>
           <div class="info__object"></div>
-          <h2 class="info__file-header">Your morning
+          <h2 class="info__file-title">Your morning
             Escape with Flair</h2>
-            <p class="info__file-text">Donec vitae sapien ut libero venenatis faucibus.
-              Nullam quis ante. Etiam sit amet orci eget eros
+            <p class="info__file-text">Donec vitae sapien ut libero venenatis faucibus.<br>
+              Nullam quis ante. Etiam sit amet orci eget eros<br>
               faucibus tincidunt. Duis leo.</p>
               <button class="info__button">read</button>
               <div class="info__file-background">
