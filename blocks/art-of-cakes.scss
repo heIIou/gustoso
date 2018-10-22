@@ -1,0 +1,282 @@
+.art-of-cakes {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: center;
+  height: $heightofblock;
+  background-color: #fefdfb;
+
+  &__wrapper {
+    position: relative;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: $max-width;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__object {
+    position: absolute;
+    top: -48px;
+    right: 1px;
+    z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
+    min-height: 106px;
+    justify-content: center;
+    background: url(../images/art-of-cakes-object.png) no-repeat center;
+    background-size: auto 100%;
+  }
+}
+
+.article {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 83%;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-top: 100px;
+    margin-left: 2px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 48px;
+    color: $dark;
+    word-spacing: 0.5px;
+    letter-spacing: 1.5px;
+  }
+
+  &__title.small.red {
+    margin-top: 12px;
+    margin-left: 1px;
+    letter-spacing: 1.41px;
+    color: #a47d5e;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 61px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 100%;
+    font-family: $Proxima;
+    color: $dark;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__chef-title {
+    margin-top: 37px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    word-spacing: 0.29px;
+    color: $dark;
+  }
+
+  &__chef {
+    position: relative;
+    margin-top: 80px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-around;
+
+    &__text {
+      margin-top: -15px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      align-self: center;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: center;
+      width: 115px;
+      font-family: $Alegreya;
+      font-size: 24px;
+      letter-spacing: 1px;
+      $borders: 1px solid #d7d5ca;
+      border-top: $borders;
+      border-bottom: $borders;
+    }
+
+    &__photo {
+      position: absolute;
+      top: -40px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: url(../images/chef.jpg) no-repeat ;
+      background-size: 250%;
+      background-position: -33px 0px;
+    }
+  }
+}
+
+.blockquote {
+  margin-top: 20px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 100%;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+  &__quote {
+    margin-top: 20px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    font-family: $Times;
+    align-self: flex-start;
+    color: rgba(86,83,76,0.5);
+    min-width: 12.5%;
+    transform: rotate(180deg);
+  }
+
+  &__text {
+    margin-top: -25px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-self: center;
+    max-width: 48%;
+    font-family: $Scriptina;
+    color: #a47d5e;
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+word-spacing: 13.5px;
+  }
+
+  &__quote.rotate {
+    margin-top: 100px;
+    align-self: flex-end;
+    transform: rotate(180deg);
+  }
+}
+
+
+.gallery {
+  position: relative;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: center;
+
+  &__photo {
+    margin: 10px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-height: 250px;
+    height: 100%;
+    max-width: 295px;
+    width: 100%;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: auto 110%;
+    background-position: center;
+
+    &__border {
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      border: 5px solid white;
+      align-self: center;
+    }
+  }
+
+  .top-left {
+    background-image: url(../images/gallery-top-left.jpg);
+    background-position: -4px -15px;
+  }
+
+  .top-right {
+    background-image: url(../images/gallery-top-right.jpg);
+    background-position: -54px -5px;
+  }
+
+  .bottom-left {
+    background-image: url(../images/gallery-bottom-left.jpg);
+    background-size: 115% auto;
+    background-position: -10px -90px;
+  }
+
+  .bottom-right {
+    background-image: url(../images/gallery-bottom-right.jpg);
+    background-position: -26px -24px;
+  }
+
+  &__text__bg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 8;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-self: center;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    background: url(../images/gallery-text-bg.png) center no-repeat;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    margin-left: 9px;
+    z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 36%;
+    align-self: center;
+    font-family: $Alegreya;
+    text-transform: uppercase;
+    color: #c9b176;
+    font-size: 32px;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.4px;
+  }
+}
