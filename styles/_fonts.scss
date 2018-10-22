@@ -1,30 +1,56 @@
-
 $Alegreya: 'Alegreya',serif;
 $Scriptina: 'Scriptina', sans-serif;
 $Playfair: 'PlayfairDisplay', serif;
 $Proxima: 'ProximaNova', serif;
-$Times: 'TimesNewRoman', serif;
+$Times: 'Times New Roman', serif;
+
+// Alegreya
+
 @font-face {
   font-family: 'Alegreya';
-  src:url(../fonts/Alegreya-Regular.ttf);
+  src:url(../fonts/Alegreya-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
-@font-face {
-  font-family: 'Scriptina';
-  src:url(../fonts/SCRIPTIN.ttf);
-}
-@font-face {
-  font-family: 'PlayfairDisplay';
-  src:url(../fonts/PlayfairDisplay-Bold.ttf);
-};
-@font-face {
-  font-family: 'ProximaNova';
-  src: url(../fonts/ProximaNova-Regular.ttf);
-}
+
 @font-face {
   font-family: 'Alegreya-Bold';
-  src: url(../fonts/Alegreya-Bold.ttf);
+  src: url(../fonts/Alegreya-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
 }
+
+// Scriptrina
+
 @font-face {
-  font-family: $Times;
-  src: url(../fonts/times.ttf);
+  font-family: 'Scriptina';
+  src:url(../fonts/Scriptina.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Playfair
+
+@font-face {
+  font-family: 'PlayfairDisplay';
+  src:url(../fonts/PlayfairDisplay-Bold.woff) format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Proxima
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url(../fonts/ProximaNova-Regular.woff) format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// $Times
+
+@font-face {
+  font-family: 'Times New Roman';
+  font-weight: normal;
+  font-style: normal;
 }
