@@ -1,0 +1,91 @@
+.interactive {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-height: 90px;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  &__button {
+    position: absolute;
+    bottom: 29px;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: url(../images/rating/button-arrow-sprite.png) no-repeat;
+    background-size: auto 115%;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+
+    &:hover {
+      background-color: $protone;
+      border: 2px solid black;
+      transition: all 0.8s ease-in-out;
+    }
+
+    &.prev {
+      left: 5px;
+      background-position: -1px -1px;
+      border: 2px solid #d8bba3;
+
+    }
+
+    &.next {
+      right: 7px;
+      background-position: -34px -1px;
+      border: 2px solid #56534c;
+
+      &:hover {
+        background-color: rgba(0,0,0,0.5);
+      }
+    }
+  }
+
+  &__preview {
+    position: absolute;
+    display: flex;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+
+    &.preview1 {
+      left: 50px;
+      background: url(../images/common/jibarito-sandwich.jpg) center;
+      background-size: auto 170%;
+      background-position: -59px -29px;
+    }
+
+    &.preview2 {
+      background: url(../images/rating/slide-3.jpg) center;
+      background-position: -239px -480px;
+      background-size: auto 322%;
+    }
+
+    &.preview3 {
+      right: 55px;
+      background: url(../images/rating/slide-4.jpg) center;
+      background-size: auto 323%;
+      background-position: 556px -123px;
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    &__bullet {
+      display: flex;
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      background-color: #d8bba3;
+    }
+  }
+}
+
+.active {
+  background-color: white;
+  border: 1px solid $protone;
+}
