@@ -1,0 +1,98 @@
+.article {
+  display: flex;
+  width: 50%;
+  justify-content: center;
+  align-items: flex-start;
+
+  &__wrapper {
+    display: flex;
+    width: 83%;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+
+  &__title {
+    margin-top: 100px;
+    margin-left: 2px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 48px;
+    color: $dark;
+    word-spacing: 0.5px;
+    letter-spacing: 1.5px;
+  }
+
+  &__title.small.red {
+    margin-top: 12px;
+    margin-left: 1px;
+    letter-spacing: 1.41px;
+    color: #a47d5e;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    margin-top: 61px;
+    display: flex;
+    width: 100%;
+    font-family: $Proxima;
+    color: $dark;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 24px;
+    text-align: center;
+  }
+
+  &__chef-title {
+    margin-top: 37px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    word-spacing: 0.29px;
+    color: $dark;
+  }
+
+  &__chef {
+    position: relative;
+    margin-top: 80px;
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    justify-content: space-around;
+
+    &__text {
+      margin-top: -15px;
+      padding-top: 17px;
+      padding-bottom: 17px;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      width: 115px;
+      font-family: $Alegreya;
+      font-size: 24px;
+      letter-spacing: 1px;
+      $borders: 1px solid #d7d5ca;
+      border-top: $borders;
+      border-bottom: $borders;
+    }
+
+    &__photo {
+      position: absolute;
+      top: -40px;
+      display: flex;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background: url(../images/art-of-cakes/chef.jpg) no-repeat ;
+      background-size: 250%;
+      background-position: -33px 0px;
+    }
+  }
+}

@@ -1,0 +1,86 @@
+.gallery {
+  position: relative;
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  align-content: center;
+
+  &__photo {
+    position: relative;
+    margin: 10px;
+    display: flex;
+    max-height: 250px;
+    height: 100%;
+    max-width: 295px;
+    width: 100%;
+    overflow: hidden;
+
+    &:hover img {
+    transform:  scale(1.1);
+    transition: all 1.3s ease-in-out;
+    }
+
+    &:hover &__border {
+      opacity: 0;
+      transition: all 1s ease-in-out;
+    }
+
+    &__border {
+      position: absolute;
+      margin-left: 5px;
+      height: calc(100% - 20px);
+      width: calc(100% - 20px);
+      border: 5px solid white;
+      align-self: center;
+      opacity: 1;
+      transition: all 0.8s ease-in-out;
+    }
+  }
+
+  &__image {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 105%;
+    width: auto;
+    transform:  scale(1.0);
+    transition: all 0.5s ease-in-out;
+
+    &.bottom-left {
+      height: 140%;
+    }
+  }
+
+  &__text__bg {
+    position: absolute;
+    right: calc(50% - (270px / 2));
+    z-index: 8;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-self: center;
+    height: 290px;
+    width: auto;
+    justify-content: center;
+    background: url(../images/art-of-cakes/gallery-text-bg.png) center no-repeat;
+  }
+
+  &__text {
+    margin-bottom: 10px;
+    margin-left: 9px;
+    z-index: 10;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    width: 36%;
+    align-self: center;
+    font-family: $Alegreya;
+    text-transform: uppercase;
+    color: #c9b176;
+    font-size: 32px;
+    text-align: center;
+    line-height: 35px;
+    letter-spacing: 0.4px;
+  }
+}

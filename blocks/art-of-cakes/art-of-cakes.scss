@@ -1,0 +1,27 @@
+.art-of-cakes {
+  display: flex;
+  justify-content: center;
+  min-height: $height-of-block;
+  background-color: #fefdfb;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    max-width: $max-width;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__object {
+    position: absolute;
+    top: -48px;
+    right: 1px;
+    z-index: 10;
+    display: flex;
+    width: 100%;
+    min-height: 106px;
+    justify-content: center;
+    background: url(../images/art-of-cakes/art-of-cakes-object.png) no-repeat center;
+    background-size: auto 100%;
+  }
+}
