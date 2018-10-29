@@ -1,0 +1,12 @@
+&__logo {
+  margin: 0;
+  display: flex;
+  height: $header-height;
+  align-items: baseline;
+  font-family: $Scriptina;
+  font-size: 30px;
+  color: $white;
+  text-decoration: none;
+  line-height: 60px;
+  letter-spacing: 8.9px;
+}

@@ -1,0 +1,44 @@
+&__card {
+  position: absolute;
+  z-index: 11;
+  top: -8%;
+  right: -104px;
+  display: flex;
+  height: 200px;
+  width: 200px;
+  justify-content: center;
+  flex-flow: row wrap;
+  font-family: $Alegreya;
+  font-weight: bold;
+  text-align: center;
+  background-color: $white;
+  background: url(../images/common/card-background.png) no-repeat;
+  background-position: left bottom;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.4);
+
+  &__title {
+    margin-top: 18px;
+    align-self: center;
+    width: 100%;
+    font-size: 18px;
+    color: #b2927a;
+    text-transform: uppercase;
+    transform: scaleX(1.2);
+  }
+
+  &__value {
+    width: 100%;
+    font-size: 92px;
+    color: #dfc691;
+    letter-spacing: 7px;
+    margin-left: 10px;
+  }
+
+  &__text {
+    margin-top: -30px;
+    width: 100%;
+    font-size: 18px;
+    color: #979285;
+    transform: scaleX(1.2);
+  }
+}
