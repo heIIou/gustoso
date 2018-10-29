@@ -1,0 +1,114 @@
+.breakfast-menu {
+  display: flex;
+  height: $height-of-block;
+  align-self: center;
+  justify-content: center;
+  background: url(../images/breakfast-menu/breakfast-menu-background.jpg) no-repeat;
+  background-size: 107% auto;
+  background-position: -52px -183px;
+
+  &__wrapper {
+    display: flex;
+    max-width: $max-width;
+    width: 100%;
+    max-height: 100%;
+    justify-content: center;
+  }
+
+  &__prices {
+    margin-left: 85px;
+    display: flex;
+    width: calc(50% - 80px);
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    margin-top: 85px;
+    display: flex;
+    color: $white;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    align-self: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    letter-spacing: 4px;
+    font-size: 60px;
+
+    &.small {
+      margin-top: 5px;
+      margin-bottom: 30px;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #c8a593;
+      letter-spacing: 1.4px;
+    }
+  }
+
+  &__name {
+    margin-top: 35px;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 30px;
+    color: $white;
+    letter-spacing: 1.7px;
+
+    &.last {
+      margin-top: 40px;
+    }
+  }
+
+
+  &__descr {
+    margin-top: 12px;
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    font-family: $Proxima;
+    font-size: 16px;
+    color: #c2beba;
+    letter-spacing: 0.8px;
+
+    &.last {
+      margin-top: 15px;
+    }
+  }
+
+  &__price {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    max-width: 100%;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    font-family: $Alegreya;
+    font-size: 36px;
+    color: #dfc691;
+    letter-spacing: 1.4px;
+
+    &.last {
+      margin-top: 25px;
+    }
+
+    &-after  {
+      display: flex;
+      position: absolute;
+      bottom: -30px;
+      opacity: 0.3;
+      background: url(../images/breakfast-menu/price-background.png) no-repeat;
+      max-width: 90px;
+      width: 100%;
+      max-height: 27px;
+      height: 100%;
+      background-position: center;
+    }
+  }
+}
