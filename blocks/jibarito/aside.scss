@@ -1,0 +1,66 @@
+.jibarito__aside {
+  position: absolute;
+  left: 0;
+  display: flex;
+  width: 33.3%;
+  flex-flow: column wrap;
+  justify-content: center;
+
+  &__item {
+    margin-top: 162px;
+    margin-bottom: -110px;
+    width: 80%;
+  }
+
+  &__icons {
+    margin-bottom: 22px;
+    display: flex;
+    justify-content: center;
+    width: 100%px;
+    height: 100px;
+  }
+
+  &__icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: -45px;
+
+    &.class {
+      background: url(../images/jibarito/icon1.jpg) no-repeat 100%;
+      background-size: auto 100%;
+    }
+
+    &.nulla {
+      background: url(../images/jibarito/icon2.jpg) no-repeat 100%;
+      background-size: auto 100%;
+    }
+
+    &.purus {
+      background: url(../images/jibarito/icon3.jpg) no-repeat 100%;
+      background-size: auto 100%;
+    }
+  }
+
+  &__title {
+    margin-left: -47px;
+    font-family: $Alegreya;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    color: $protone;
+    transform: scaleX(1.08);
+  }
+
+  &__text {
+    margin-top: 21px;
+    margin-left: -12px;
+    width: 93%;
+    font-family: $Proxima;
+    font-size: 14px;
+    color: $dark;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 1.4px;
+  }
+}
