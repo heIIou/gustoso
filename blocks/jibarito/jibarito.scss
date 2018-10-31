@@ -7,6 +7,16 @@ $block-height: 900px;
   min-height: $block-height;
   background-color: #f3f1e9;
 
+  &__global-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    max-width: $max-width;
+    min-height: $block-height;
+    overflow: hidden;
+  }
+
   &__title {
     margin-top: 95px;
     position: absolute;
