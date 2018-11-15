@@ -1,3 +1,4 @@
+@import "../../common/logo.scss";
 $border-color: #c2beba;
 
 .footer {
@@ -65,8 +66,6 @@ $border-color: #c2beba;
     align-items: center;
     color: $dark;
   }
-
-  @import "../common/logo.scss";
 
   &__logo {
     color: $dark;

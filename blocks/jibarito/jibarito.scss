@@ -1,3 +1,4 @@
+@import "../../common/card.scss";
 $block-height: 900px;
 
 .jibarito {
@@ -67,6 +68,7 @@ $block-height: 900px;
   }
 
   &__back {
+    $back: &;
     margin-top: 168px;
     height: 535px;
     width: 100%;
@@ -74,67 +76,62 @@ $block-height: 900px;
     background: url(../images/common/jibarito-sandwich.jpg) no-repeat;
     background-size: auto 108%;
     background-position: -6px -23px;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.5s ease-in;
 
     &:hover {
-      border: 0px solid white;
-      transition: all 1s ease-in-out;
+      background-size: auto 115%;
+      background-position: 100% 15%;
+      transition: all 0.8s ease-in-out;
+
+      #{$back}__info {
+        opacity: 0;
+        transition: all 0.8s ease-in-out;
+      }
+
+      #{$back}__button {
+        left: 40%;
+        bottom: 40%;
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0 0 80px $white;
+        transform: scale(1.2);
+        transition: all 0.8s ease-out;
+      }
     }
 
-    &:hover &__info {
-      opacity: 0;
-      transition: all 1s ease-in-out;
-    }
-
-    &:hover &__button {
-      bottom: 38%;
-      left: 40%;
+    &__button {
+      position: absolute;
+      z-index: 15;
+      bottom: 70px;
+      left: -22px;
+      display: flex;
+      width: 168px;
+      height: 60px;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
       background-color: $white;
-      transform: scale(1.2);
-      box-shadow: 0 0 25px rgba(255,255,255, 0.7);
-      border: none;
-      border-radius: 10px;
-      transition: all 1s ease-in-out;
+      border: 1px dashed $protone;
+      color: $protone;
+      cursor: pointer;
+      transition: all 0.5s ease-in;
     }
 
-  &__button {
-    position: absolute;
-    z-index: 15;
-    bottom: 70px;
-    left: -22px;
-    display: flex;
-    width: 168px;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    background-color: $white;
-    border: 1px dashed $protone;
-    color: $protone;
-    cursor: pointer;
-    transition: all 1s ease-in-out;
+    &__info {
+      position: absolute;
+      z-index: 10;
+      right: 10px;
+      bottom: 65px;
+      flex-flow: column wrap;
+      width: 200px;
+      height: 600px;
+      opacity: 1;
+      transition: all 0.5s ease-in-out;
+    }
   }
-
-  &__info {
-    position: absolute;
-    z-index: 10;
-    right: 10px;
-    bottom: 65px;
-    flex-flow: column wrap;
-    width: 200px;
-    height: 600px;
-    opacity: 1;
-    transition: all 1s ease-in-out;
-  }
-}
-
-  @import "../common/card.scss";
 
   &__card {
-    $card: &;
     position: static;
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
 
@@ -142,7 +139,7 @@ $block-height: 900px;
       background-image: none;
       background-color: $white;
       opacity: .8;
-      #{$card}__value {
+      .card__value {
         font-size: 60px;
         color: $dark;
       }
