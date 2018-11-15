@@ -13,7 +13,6 @@
     font-family: $Times;
     align-self: flex-start;
     color: rgba(86,83,76,0.5);
-    min-width: 12.5%;
     transform: rotate(180deg);
   }
 
@@ -34,6 +33,6 @@ word-spacing: 13.5px;
   &__quote.rotate {
     margin-top: 100px;
     align-self: flex-end;
-    transform: rotate(180deg);
+    transform: scale(1,1);
   }
 }
