@@ -6,23 +6,23 @@
   <link rel="stylesheet" href="main/main.css">
   <link rel="shortcut icon" href="./images/favicon/favicon.ico" type="image/x-icon">
   <link rel="icon" href="./images/favicon/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="slick/slick.css">
-  <link rel="stylesheet" href="slick/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
 </head>
 <body>
   <menu class="menu">
     <div class="menu__wrapper">
-      <a href="#" class="menu__logo">Gustoso</a>
+      <a href="#" class="menu__logo logo">Gustoso</a>
       <ul class="menu__navigation navigation">
-        <li class="navigation__item"><span class="navigation__gradient"></span><a href="#" class="navigation__link">welcome</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">welcome</a></li>
         <li class="navigation__item"><div href="#" class="navigation__decor">~</div></li>
-        <li class="navigation__item"><span class="navigation__gradient"></span><a href="#" class="navigation__link">Menu</a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">Menu</a></li>
         <li class="navigation__item"><div href="#" class="navigation__decor">~</div></li>
-        <li class="navigation__item"><span class="navigation__gradient"></span><a href="#" class="navigation__link">Reservations </a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">Reservations </a></li>
         <li class="navigation__item"><div href="#" class="navigation__decor">~</div></li>
-        <li class="navigation__item"><span class="navigation__gradient"></span><a href="#" class="navigation__link">news </a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">news </a></li>
         <li class="navigation__item"><div href="#" class="navigation__decor">~</div></li>
-        <li class="navigation__item"><span class="navigation__gradient"></span><a href="#" class="navigation__link">contact </a></li>
+        <li class="navigation__item"><a href="#" class="navigation__link">contact </a></li>
       </ul>
       <div class="menu__social-media social-media">
         <a href="#" class="social-media__link twitter"><img class="social-media__icon" src="./images/social-icons/twitter-brands.svg" alt=""></a>
@@ -77,10 +77,10 @@
   <section class="rating">
     <div class="rating__wrapper">
       <div class="rating__pad">
-        <div class="rating__card">
-          <h2 class="rating__card__title">ready in</h2>
-          <p class="rating__card__value">40</p>
-          <p class="rating__card__text">mins</p>
+        <div class="rating__card card">
+          <h2 class="card__title">ready in</h2>
+          <p class="card__value">40</p>
+          <p class="card__text">mins</p>
         </div>
         <div class="rating__stars">
           <div class="rating__star star1"></div>
@@ -89,8 +89,11 @@
           <div class="rating__star star4"></div>
           <div class="rating__star star5"></div>
         </div>
-        <div class="rating__backgrounds">
+        <div class="rating__backgrounds js-rating-slider">
           <img src="images/rating/slide-1.jpg" alt="" class="rating__bg">
+          <img src="images/common/jibarito-sandwich.jpg" alt="" class="rating__bg">
+          <img src="images/rating/slide-3.jpg" alt="" class="rating__bg">
+          <img src="images/rating/slide-4.jpg" alt="" class="rating__bg">
         </div>
         <div class="rating__article article">
           <div class="rating__article__wrapper">
@@ -99,16 +102,15 @@
             <p class="rating__article__text">Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus.</p>
             <div class="rating__stars orange"></div>
             <div class="rating__interactive interactive">
-              <button class="interactive__button prev"></button>
-              <button class="interactive__button next"></button>
-              <div class="interactive__preview preview1"></div>
-              <div class="interactive__preview preview2"></div>
-              <div class="interactive__preview preview3"></div>
-              <div class="interactive__bullets">
-                <div class="interactive__bullet bullet1"></div>
-                <div class="interactive__bullet bullet2"></div>
-                <div class="interactive__bullet bullet3"></div>
-                <div class="interactive__bullet bullet4"></div>
+              <button class="interactive__button js-rating-button prev"></button>
+              <button class="interactive__button js-rating-button next"></button>
+              <div class="interactive__previews js-preview-slider">
+                <div class="interactive__preview preview1"></div>
+                <div class="interactive__preview preview2"></div>
+                <div class="interactive__preview preview3"></div>
+                <div class="interactive__preview preview4"></div>
+              </div>
+              <div class="interactive__bullets js-rating-bullets">
               </div>
             </div>
           </div>
@@ -181,20 +183,20 @@
           <div class="jibarito__back">
             <div class="jibarito__back__button">full recipe</div>
             <div class="jibarito__back__info">
-              <div class="jibarito__card no-image">
-                <h2 class="jibarito__card__title">prep</h2>
-                <p class="jibarito__card__value">15</p>
-                <p class="jibarito__card__text">mins</p>
+              <div class="jibarito__card card no-image">
+                <h2 class="card__title">prep</h2>
+                <p class="card__value">15</p>
+                <p class="card__text">mins</p>
               </div>
-              <div class="jibarito__card no-image">
-                <h2 class="jibarito__card__title">cook</h2>
-                <p class="jibarito__card__value">35</p>
-                <p class="jibarito__card__text">mins</p>
+              <div class="jibarito__card card no-image">
+                <h2 class="card__title">cook</h2>
+                <p class="card__value">35</p>
+                <p class="card__text">mins</p>
               </div>
-              <div class="jibarito__card 3">
-                <h2 class="jibarito__card__title">ready in</h2>
-                <p class="jibarito__card__value">50</p>
-                <p class="jibarito__card__text">mins</p>
+              <div class="jibarito__card card 3">
+                <h2 class="card__title">ready in</h2>
+                <p class="card__value">50</p>
+                <p class="card__text">mins</p>
               </div>
             </div>
           </div>
@@ -214,7 +216,7 @@
           <li class="footer__list__item"><a href="#" class="footer__link">culture</a></li>
         </ul>
       </div>
-      <a href="#"class="footer__logo">Gustoso</a>
+      <a href="#"class="footer__logo logo">Gustoso</a>
       <div class="footer__right">
         <ul class="footer__list">
           <li class="footer__list__item"><a href="#" class="footer__link">events</a></li>
@@ -227,8 +229,8 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-  <script src="slick/slick.js" type="text/javascript"></script>
-  <script type="text/javascript" src="js/slider.js">
-  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+  <script type="text/javascript" src="js/slider.js"></script>
+  <script src="js/header-color.js" charset="utf-8"></script>
 </body>
 </html>
