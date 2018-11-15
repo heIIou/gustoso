@@ -8,6 +8,7 @@
 
   &__button {
     position: absolute;
+    z-index: 100;
     bottom: 29px;
     display: flex;
     width: 32px;
@@ -16,13 +17,17 @@
     background: url(../images/rating/button-arrow-sprite.png) no-repeat;
     background-size: auto 115%;
     cursor: pointer;
-    transition: all 0.8s ease-in-out;
+    transition: all 0.1s ease-in-out;
 
     &:hover {
-      background-color: $protone;
+      background-color: rgba(216,187,163,0.3);
       border: 2px solid black;
-      transition: all 0.8s ease-in-out;
+      transition: all 0.1s ease-in-out;
     }
+
+    &:focus { outline: none; }
+
+    &:active { background-color: $white };
 
     &.prev {
       left: 5px;
@@ -39,14 +44,26 @@
       &:hover {
         background-color: rgba(0,0,0,0.5);
       }
+
+      &:active {  background-color: rgba(0,0,0,0.55);  }
     }
   }
 
+  &__previews {
+    padding-left: 10px;
+    display: flex;
+    width: 75%;
+    justify-content: center;
+    align-self: center;
+    overflow: hidden;
+  }
+
   &__preview {
-    position: absolute;
     display: flex;
     width: 90px;
     height: 90px;
+    max-width: 90px;
+    max-height: 90px;
     border-radius: 50%;
 
     &.preview1 {
@@ -68,24 +85,36 @@
       background-size: auto 323%;
       background-position: 556px -123px;
     }
-  }
 
-  &__bullets {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-
-    &__bullet {
-      display: flex;
-      height: 10px;
-      width: 10px;
-      border-radius: 50%;
-      background-color: #d8bba3;
+    &.preview4 {
+      background: url(../images/rating/slide-1.jpg) center;
+      background-size: auto 150%;
+      background-position: -20px -20px;
     }
   }
 }
 
-.active {
-  background-color: white;
-  border: 1px solid $protone;
+.js-rating-bullets {
+  position: absolute;
+  bottom: -11px;
+  display: flex;
+  width: 45%;
+  justify-content: space-around;
+
+  li {
+    display: flex;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #d8bba3;
+
+    button { display: none; }
+  }
+
+  .slick-active {
+    height: 8px;
+    width: 8px;
+    border: 1px solid $protone;
+    background-color: $white;
+  }
 }

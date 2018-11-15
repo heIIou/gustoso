@@ -1,3 +1,4 @@
+@import "../../common/card.scss";
 $rating-width: 965px;
 
 .rating {
@@ -29,6 +30,7 @@ $rating-width: 965px;
     height: 100%;
     align-self: center;
     flex-flow: row-reverse wrap;
+    box-shadow: 0 0 40px rgba(0,0,0,0.8);
   }
 
   &__backgrounds {
@@ -52,5 +54,4 @@ $rating-width: 965px;
     display: flex;
     background-color: orange;
   }
-  @import "../common/card.scss";
 }
