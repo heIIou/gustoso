@@ -748,6 +748,7 @@ body {
   display: flex;
   width: 75%;
   justify-content: center;
+  align-items: center;
   align-self: center;
   overflow: hidden;
 }
@@ -761,25 +762,25 @@ body {
 }
 .interactive__preview.preview1 {
   left: 50px;
-  background: url(../images/common/jibarito-sandwich.jpg) center;
+  background: url(../images/rating/slide-4.jpg) center;
   background-size: auto 170%;
   background-position: -59px -29px;
 }
 .interactive__preview.preview2 {
-  background: url(../images/rating/slide-3.jpg) center;
-  background-position: -239px -480px;
-  background-size: auto 322%;
+  background: url(../images/rating/slide-1.jpg) center;
+  background-size: auto 150%;
+  background-position: -20px -20px;
 }
 .interactive__preview.preview3 {
   right: 55px;
-  background: url(../images/rating/slide-4.jpg) center;
+  background: url(../images/common/jibarito-sandwich.jpg) center;
   background-size: auto 323%;
   background-position: 556px -123px;
 }
 .interactive__preview.preview4 {
-  background: url(../images/rating/slide-1.jpg) center;
-  background-size: auto 150%;
-  background-position: -20px -20px;
+  background: url(../images/rating/slide-3.jpg) center;
+  background-position: -239px -480px;
+  background-size: auto 322%;
 }
 
 .js-rating-bullets {

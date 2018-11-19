@@ -18,6 +18,6 @@ $(document).ready(function(){
     asNavFor: `.rating__backgrounds`,
     slidesToShow: 3,
     slidesToScroll: 1,
-    swipeToSlide: true
+    swipeToSlide: true,
   });
 });
