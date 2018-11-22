@@ -309,6 +309,91 @@ body {
   transition: all 0.5s linear;
 }
 
+.registration {
+  position: fixed;
+  top: 250px;
+  z-index: 999;
+  align-self: center;
+  display: flex;
+  width: 400px;
+  height: 230px;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 25px;
+  box-shadow: 0 0 150px black;
+  opacity: 0;
+  transform: scale(0, 0);
+  transition: all 0.2s linear;
+}
+.registration.active {
+  opacity: 1;
+  transform: scale(1.5, 1.5);
+  transform-origin: center;
+  transition: all 0.2s linear;
+}
+.registration__email {
+  margin-top: 35px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.registration__input-email {
+  display: flex;
+  width: 90%;
+  border-radius: 15px;
+  text-align: center;
+}
+.registration__password {
+  margin-top: 35px;
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+.registration__input-password {
+  width: 90%;
+  border-radius: 15px;
+  text-align: center;
+}
+.registration__card-number {
+  display: flex;
+  width: 90%;
+}
+.registration__input-card-number {
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+}
+.registration__cvc {
+  display: flex;
+  width: 90%;
+}
+.registration__input-cvc {
+  width: 100%;
+  border-radius: 15px;
+  text-align: center;
+}
+.registration__select {
+  display: flex;
+  width: 90%;
+  border-radius: 15px;
+}
+.registration__button-close {
+  position: absolute;
+  right: 0;
+  display: flex;
+  width: 40px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
+  border-top-right-radius: 25px;
+  background-color: red;
+  cursor: pointer;
+}
+
 .art-of-cakes {
   display: flex;
   justify-content: center;

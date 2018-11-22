@@ -37,7 +37,19 @@
       <h1 class="intro__main-title">Pastry with love</h1>
       <div class="intro__main-decor"></div>
       <p class="intro__main-text">We’re bringing you fresh ingredients every<br> day in ways you can’t resist.</p>
-      <button class="intro__button" type="button" name="menu">our menu</button>
+      <button class="intro__button js-button-open" type="button" name="menu">our menu</button>
+      <form class="intro__form registration js-main-form" method="post" action="#" enctype="text/plain" name="user">
+        <button class="registration__button-close js-button-close" type="button" name="button">x</button>
+        <div class="registration__email"><input class="registration__input-email" type="email" name="email" required placeholder="Enter your e-mail adress"></div>
+        <div class="registration__password"><input class="registration__input-password" type="password" name="password" required placeholder="Enter your password"></div>
+        <div class="registration__card-number"><input class="registration__input-card-number" type="text" name="card_number" required minlength="19" placeholder="Enter your credit/debit card number"></div>
+        <div class="registration__cvc"><input class="registration__input-cvc" type="text" name="card_cvc" required placeholder="Enter CVC code of your card" minlength="3" pattern="[0-9]{3}"></div>
+        <select class="registration__select" name="send_method">
+          <option value="Send to neareast post office" selected>Send to a neareast post office</option>
+          <option value="Send to your adress">Send to your adress</option>
+        </select>
+        <input class="registration__submit js-button-submit" type="submit" name="" value="Register">
+      </form>
     </div>
   </section>
 
@@ -230,7 +242,9 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+  <script src="./js/jquery.inputmask.js" charset="utf-8"></script>
   <script type="text/javascript" src="js/slider.js"></script>
   <script src="js/header-color.js" charset="utf-8"></script>
+  <script src="./js/inputmask.js" charset="utf-8"></script>
 </body>
 </html>
