@@ -1,4 +1,4 @@
-$(document).ready(function () {
+export default function() {
 
   const $container = $('.js-wrapper-index');
   if(!$container.length) {
@@ -25,4 +25,4 @@ $(document).ready(function () {
       isHasClassActive = false;
     }
   });
-});
+};

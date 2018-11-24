@@ -1,4 +1,4 @@
-$(document).ready(function(){
+export default function() {
   $('.rating__backgrounds').slick({
     infinite: true,
     dots: true,
@@ -20,4 +20,4 @@ $(document).ready(function(){
     slidesToScroll: 1,
     swipeToSlide: true,
   });
-});
+};
