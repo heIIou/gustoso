@@ -1,39 +1,41 @@
-import {commonHandler} from './inputsHandler.js';
+import {commonHandler } from './inputsHandler.js';
 
 export default function () {
   const $container = $('.js-wrapper-index');
   if (!$container) {
     return;
   }
-
-  const $form = $(document).find('.js-main-form');
-  const _form = $(document).find('.js-form'); // for correct closeOnClick()
-  const $formContainer = $(document).find('.popup__container');
-  const buttonOpen = $(document).find('.js-button-open');
-  const buttonClose = $(document).find('.js-button-close');
-  const firstPopup = $(document).find('.js-popup-open');
-  const secondPopup = $(document).find('.js-popup-close');
+  const POPUP_CONTAINER = 'js-popup-container';
+  const $popup = $container.find('.js-popup');
+  const $form = $container.find('.js-form'); // for correct closeOnClick()
+  const $popupContainer = $container.find(`.${POPUP_CONTAINER}`);
+  const buttonOpen = $container.find('.js-button-open');
+  const buttonClose = $container.find('.js-button-close');
+  const firstPopup = $container.find('.js-popup-open');
+  const secondPopup = $container.find('.js-popup-close');
+  let $timer = $container.find('.js-timer')[0];
   const activeClass = 'active';
   const visible = 'visible';
   const hidden = 'hidden';
-  let hasActiveClass = false;
-  let isHover;
 
   function timer(distance) {
-    $(document).find('.js-timer')[0].value = distance;
+    $timer.value = distance;
   }
 
   function resetPopup() {
-    firstPopup.removeClass(hidden);
-    secondPopup.removeClass(visible);
-    _form[0].reset();
+    setTimeout(function () {
+      if ($($popup).hasClass(activeClass) === false) {
+        firstPopup.removeClass(hidden);
+        secondPopup.removeClass(visible);
+        $form[0].reset();
+      }
+    }, 300)
   }
 
-  function closePopup() {
+  function autoClosePopup() {
     firstPopup.addClass(hidden);
     secondPopup.addClass(visible);
     _closeStartTimer();
-    setTimeout(resetPopup, 5500);
   }
 
   function _closeStartTimer() {
@@ -47,57 +49,41 @@ export default function () {
       timer(distance);
       if(distance === 0) {
         clearInterval(timerInterval);
-        $form.removeClass(activeClass);
+        $popup.removeClass(activeClass);
+        resetPopup();
       }
     }, 1000);
   }
 
-  _form.hover(function () {
-    return isHover = true;
-  },
-  function () {
-    return isHover = false;
-  })
-
-  function closeOnClick() {
-    if (hasActiveClass && (isHover === false)) {
-      $form.removeClass(activeClass);
-      hasActiveClass = false;
-    };
-    return;
-  }
+  $popupContainer.click(function (e) {
+    const hasClass = $(e.target).hasClass(POPUP_CONTAINER);
+    if (hasClass) {
+      $popup.removeClass(activeClass);
+      resetPopup();
+    }
+  });
 
   buttonOpen.click(function () {
-    $form.addClass(activeClass);
-    return hasActiveClass = true;
+    $popup.addClass(activeClass);
   });
 
   buttonClose.click(function () {
-    $form.removeClass(activeClass);
+    $popup.removeClass(activeClass);
     resetPopup();
-    return hasActiveClass = false;
   });
 
-  $form.click(function () {
-    closeOnClick();
-  });
-
-  $formContainer.click(function () {
-    closeOnClick();
-  });
-
-  _form.submit(function(event) {
+  $form.submit(function(event) {
     event.preventDefault();
     let formData = {};
     let validation = commonHandler();
 
     if (validation) {
-      _form.serializeArray().map(function (x) {
+      $form.serializeArray().map(function (x) {
         formData[x.name] = x.value;
       })
       JSON.stringify(formData);
       console.log(formData);
-      closePopup();
+      autoClosePopup();
       return;
     };
 

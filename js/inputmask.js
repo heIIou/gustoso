@@ -4,11 +4,12 @@ export default function() {
     return;
   }
 
-  const cardNumber = $(document).find('.js-input-card-number');
-  const cardCvc = $(document).find('.js-input-card-cvc');
-  const email = $(document).find('.js-input-email');
-  const password = $(document).find('.js-input-password')
+  const $cardNumber = $container.find('.js-input-card-number')[0];
+  const $cardCvc = $container.find('.js-input-card-cvc')[0];
+  const $email = $container.find('.js-input-email')[0];
+  const $password = $container.find('.js-input-password')[0];
 
+  console.log($cardCvc, $cardNumber, $email, $password);
   const checkFieldValue = (regexp = '') => {
 
     return function (event) {
@@ -28,15 +29,11 @@ export default function() {
   const checkCardNumberValue = checkFieldValue(regExpData.card_number);
   const checkCardCvcValue = checkFieldValue(regExpData.card_cvc);
 
-  email.on('input', function(e) {
-    checkEmailValue(e);
-  });
+  $($email).on('input', checkEmailValue);
 
-  password.on('input', function (e) {
-    checkPasswordValue(e);
-  });
+  $($password).on('input', checkPasswordValue);
 
-  cardNumber.on('input', function (e) {
+  $($cardNumber).on('input', function (e) {
     checkCardNumberValue(e);
     let currentInput = e.currentTarget.value;
     if (currentInput.length === 4 || currentInput.length === 9 || currentInput.length === 14) {
@@ -44,7 +41,5 @@ export default function() {
     }
   })
 
-  cardCvc.on('input', function (e) {
-    checkCardCvcValue(e);
-  })
+  $($cardCvc).on('input', checkCardCvcValue);
 };
