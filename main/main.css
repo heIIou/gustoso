@@ -97,7 +97,7 @@ body {
 
 .menu {
   position: fixed;
-  z-index: 1000;
+  z-index: 2000;
   display: flex;
   width: 100%;
   height: 70px;
@@ -309,9 +309,59 @@ body {
   transition: all 0.5s linear;
 }
 
-.registration {
+.popup {
   position: fixed;
-  top: 250px;
+  z-index: 999;
+  top: 0;
+  left: -200%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  transition: left 0.01s ease 0.4s;
+}
+.popup:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(247, 247, 247, 0);
+  transition: background-color 0.4s ease;
+  z-index: 0;
+}
+.popup.active {
+  left: 0;
+  transition: left 0.01s ease;
+}
+.popup.active:before {
+  background-color: rgba(247, 247, 247, 0.8);
+}
+.popup.active .popup__container {
+  opacity: 1;
+  transform: scale(1);
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+.popup__container {
+  position: relative;
+  min-height: 515px;
+  width: 721px;
+  padding: 50px 41px 49px;
+  transform: scale(0.9);
+  transform-origin: bottom;
+  opacity: 0;
+  background-color: transparent;
+  transition: transform 0.35s ease, opacity 0.3s ease;
+  z-index: 999;
+}
+
+.registration {
+  position: absolute;
+  top: 230px;
+  left: 200px;
   z-index: 999;
   align-self: center;
   display: flex;
@@ -323,64 +373,107 @@ body {
   background-color: #fff;
   border-radius: 25px;
   box-shadow: 0 0 150px black;
-  opacity: 0;
-  transform: scale(0, 0);
-  transition: all 0.2s linear;
-}
-.registration.active {
-  opacity: 1;
   transform: scale(1.5, 1.5);
   transform-origin: center;
   transition: all 0.2s linear;
 }
-.registration__email {
-  margin-top: 35px;
+.registration__global-wrapper {
   display: flex;
-  width: 50%;
+  width: 100%;
+  height: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 1;
+  visibility: visible;
+}
+.registration__global-wrapper.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+.registration__close-wrapper {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+}
+.registration__close-wrapper.visible {
+  opacity: 1;
+  visibility: visible;
+}
+.registration__wrapper {
+  display: flex;
+  width: 90%;
   justify-content: center;
 }
-.registration__input-email {
-  display: flex;
-  width: 90%;
-  border-radius: 15px;
-  text-align: center;
-}
-.registration__password {
+.registration__wrapper.half {
   margin-top: 35px;
-  display: flex;
   width: 50%;
-  justify-content: center;
 }
-.registration__input-password {
-  width: 90%;
-  border-radius: 15px;
-  text-align: center;
-}
-.registration__card-number {
+.registration__small-popup {
+  position: absolute;
+  margin-top: 25px;
   display: flex;
-  width: 90%;
+  width: 55%;
+  min-height: 30px;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  border: 1px solid black;
+  border-radius: 12px;
+  background-color: #DFDFDF;
 }
-.registration__input-card-number {
+.registration__small-popup.active {
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+}
+.registration__input {
   width: 100%;
   border-radius: 15px;
   text-align: center;
 }
-.registration__cvc {
-  display: flex;
+.registration__input.small {
   width: 90%;
-}
-.registration__input-cvc {
-  width: 100%;
-  border-radius: 15px;
-  text-align: center;
 }
 .registration__select {
   display: flex;
   width: 90%;
   border-radius: 15px;
 }
+.registration__title {
+  margin-top: 20px;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.registration__title-text {
+  width: auto;
+  text-align: center;
+  text-decoration: underline;
+  font-size: 30px;
+}
+.registration__text {
+  margin-top: 20px;
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+.registration__text-text {
+  font-size: 20px;
+  color: #989;
+}
 .registration__button-close {
   position: absolute;
+  z-index: 1050;
   right: 0;
   display: flex;
   width: 40px;
@@ -392,6 +485,14 @@ body {
   border-top-right-radius: 25px;
   background-color: red;
   cursor: pointer;
+}
+.registration__popup-timer {
+  display: flex;
+  background: none;
+  border: none;
+  justify-content: center;
+  text-align: center;
+  font-size: 25px;
 }
 
 .art-of-cakes {

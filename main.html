@@ -38,18 +38,29 @@
       <div class="intro__main-decor"></div>
       <p class="intro__main-text">We’re bringing you fresh ingredients every<br> day in ways you can’t resist.</p>
       <button class="intro__button js-button-open" type="button" name="menu">our menu</button>
-      <form class="intro__form registration js-main-form" method="post" action="#" enctype="text/plain" name="user">
-        <button class="registration__button-close js-button-close" type="button" name="button">x</button>
-        <div class="registration__email"><input class="registration__input-email" type="email" name="email" required placeholder="Enter your e-mail adress"></div>
-        <div class="registration__password"><input class="registration__input-password" type="password" name="password" required placeholder="Enter your password"></div>
-        <div class="registration__card-number"><input class="registration__input-card-number" type="text" name="card_number" required minlength="19" placeholder="Enter your credit/debit card number"></div>
-        <div class="registration__cvc"><input class="registration__input-cvc" type="text" name="card_cvc" required placeholder="Enter CVC code of your card" minlength="3" pattern="[0-9]{3}"></div>
-        <select class="registration__select" name="send_method">
-          <option value="Send to neareast post office" selected>Send to a neareast post office</option>
-          <option value="Send to your adress">Send to your adress</option>
-        </select>
-        <input class="registration__submit js-button-submit" type="submit" name="" value="Register">
-      </form>
+      <div class="popup  js-main-form">
+        <div class="popup__container">
+          <form class="intro__form registration js-form" action="#" enctype="text/plain" name="user">
+            <button class="registration__button-close js-button-close" type="button" name="button">x</button>
+            <div class="registration__global-wrapper js-popup-open">
+              <div class="registration__wrapper half"><input class="registration__input small js-input-email" type="email" name="email" required placeholder="Enter your e-mail adress"></div>
+              <div class="registration__wrapper half"><input class="registration__input small js-input-password" type="password" name="password" required placeholder="Enter your password"></div>
+              <div class="registration__wrapper"><div class="registration__small-popup js-small-popup-card-number">You've entered incorrect data. This input requires 16 digits</div><input class="registration__input js-input-card-number" type="text" name="card_number" maxlength="19" placeholder="Enter your credit/debit card number"></div>
+              <div class="registration__wrapper"><div class="registration__small-popup js-small-popup-card-cvc">This input requires 3 digits</div><input class="registration__input js-input-card-cvc" type="text" name="card_cvc" placeholder="Enter CVC code of your card" maxlength="3"></div>
+              <select class="registration__select" name="send_method">
+                <option value="Send to neareast post office" selected>Send to a neareast post office</option>
+                <option value="Send to your adress">Send to your adress</option>
+              </select>
+              <input class="registration__submit js-button-submit" type="submit" name="" value="Register">
+            </div>
+            <div class="registration__close-wrapper js-popup-close">
+              <div class="registration__title"><h2 class="registration__title-text">You've succesfully registered!</h2></div>
+              <input class="registration__popup-timer js-timer" type="text" disabled value="5"></input>
+              <div class="registration__text"><p class="registration__text-text">You will receive your order soon</p></div>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -240,11 +251,9 @@
       </div>
     </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" type="text/javascript"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
   <script src="./js/jquery.inputmask.js" charset="utf-8"></script>
-  <script type="text/javascript" src="js/slider.js"></script>
-  <script src="js/header-color.js" charset="utf-8"></script>
-  <script src="./js/inputmask.js" charset="utf-8"></script>
+  <script src="./main.js" type="module" ></script>
 </body>
 </html>
