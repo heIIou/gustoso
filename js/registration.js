@@ -81,7 +81,15 @@ export default function () {
       $form.serializeArray().map(function (x) {
         formData[x.name] = x.value;
       })
-      JSON.stringify(formData);
+      JSON.stringify(formData, function (key, value) {
+        if (isNaN(value) === false) {
+          console.log(typeof parseInt(value), typeof Number(value));
+          let newValue = parseInt(value);
+          console.log(typeof newValue);
+          return newValue;
+        }
+        return value;
+      });
       console.log(formData);
       autoClosePopup();
       return;
